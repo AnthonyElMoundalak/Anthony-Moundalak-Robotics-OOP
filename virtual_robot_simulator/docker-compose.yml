@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  robot:
+    # Build the web service using the Dockerfile in the web directory
+    #
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/src
