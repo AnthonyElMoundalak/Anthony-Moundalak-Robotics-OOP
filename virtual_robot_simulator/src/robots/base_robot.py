@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class Robot(ABC):
-    def __init__(self, name:str, battery_level=100, status="idle"): 
+    def __init__(self, name:str, battery_level:int, status:str): 
         self._name = name
         self._battery_level = battery_level 
         self._status = status

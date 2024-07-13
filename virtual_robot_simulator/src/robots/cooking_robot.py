@@ -5,6 +5,9 @@ class CookingRobot(Robot):
         super().__init__(name, battery_level, status)
         self._cooking_skill = cooking_skill
         
+    def get_skill(self):
+        return self._cooking_skill
+        
     def work(self):
         if self._battery_level >= 30:
             self._battery_level -= 30

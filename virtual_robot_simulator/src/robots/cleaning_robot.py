@@ -5,6 +5,9 @@ class CleaningRobot(Robot):
         super().__init__(name, battery_level, status)
         self._cleaning_tool = cleaning_tool
         
+    def get_tool(self):
+        return self._cleaning_tool
+        
     def work(self):
         if self._battery_level >= 20:
             self._battery_level -= 20
