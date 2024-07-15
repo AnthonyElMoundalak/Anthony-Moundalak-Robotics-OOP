@@ -34,3 +34,10 @@ def test_work(robot):
     robot.work()
     assert robot.get_battery_level() == 90
     assert robot.get_status() == "working"
+
+def test_static_method():
+    assert Robot.static_diagnostic_info() == "Ensure the robot is charged and in good condition."
+    assert Robot.is_valid_battery(78) == True
+    assert Robot.is_valid_battery(178) == False
+    assert Robot.is_valid_battery(-78) == False
+    

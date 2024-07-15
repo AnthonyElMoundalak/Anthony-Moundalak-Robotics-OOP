@@ -33,3 +33,7 @@ def test_report_status(cleaner, capsys):
     cleaner.report_status()
     captured = capsys.readouterr()
     assert "CleanerBot | Status: idle | Battery Level: 100" in captured.out
+
+def test_class_method():
+    assert CleaningRobot.class_diagnostic_info() == "CleaningRobot diagnostic: Check all systems."
+

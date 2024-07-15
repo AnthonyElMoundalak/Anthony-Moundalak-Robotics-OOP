@@ -33,3 +33,8 @@ def test_report_status(cook, capsys):
     cook.report_status()
     captured = capsys.readouterr()
     assert "CookingBot | Status: idle | Battery Level: 100" in captured.out
+
+def test_class_method():
+    assert CookingRobot.class_diagnostic_info() == "CookingRobot diagnostic: Check all systems."
+
+

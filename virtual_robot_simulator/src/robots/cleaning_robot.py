@@ -1,14 +1,14 @@
 from .base_robot import Robot
 
 class CleaningRobot(Robot):
-    def __init__(self, name:str, battery_level, status, cleaning_tool:str):
-        super().__init__(name, battery_level, status)
+    def __init__(self, name:str, battery_level:int, status:str, cleaning_tool:str):
+        Robot.__init__(self, name, battery_level, status)
         self._cleaning_tool = cleaning_tool
         
-    def get_tool(self):
+    def get_tool(self) -> str:
         return self._cleaning_tool
         
-    def work(self):
+    def work(self) -> None:
         if self._battery_level >= 20:
             self._battery_level -= 20
             self._status = "working"
