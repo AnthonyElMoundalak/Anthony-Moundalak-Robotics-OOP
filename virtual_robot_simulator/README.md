@@ -74,4 +74,4 @@ Pytest is used for testing. It supports simple test functions and test classes, 
 3. Build and run the docker image using docker-composer:
 
     ```python
-    docker composer -up
+    docker compose up --build
